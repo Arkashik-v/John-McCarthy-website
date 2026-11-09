@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Джон Маккарти — отец искусственного интеллекта</title>
+    <meta name="keywords" content="Джон Маккарти, искусственный интеллект, Лисп, Lisp, учёный, информатика, Stanford">
+    <meta name="description" content="Сайт, посвящённый жизни и научным достижениям Джона Маккарти — создателя языка Lisp и термина «искусственный интеллект».">
+
+    <!-- open graph -->
+    <meta property="og:title" content="Джон Маккарти — отец искусственного интеллекта">
+    <meta property="og:site_name" content="Джон Маккарти">
+    <meta property="og:url" content="https://sharushinskiy.ru/mccarthy/">
+    <meta property="og:description" content="Жизнь и научные достижения Джона Маккарти.">
+    <meta property="og:image" content="img/John_McCarthy_Stanford.jpg">
+
+    <!-- стилизация панели браузера -->
+    <meta name="theme-color" content="#4a90a4">
+    <meta name="msapplication-navbutton-color" content="#4a90a4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" sizes="32x32" href="icons/favicon.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="icons/favicon.ico">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700;900&display=swap">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header__logo">
+        <i class="fa-solid fa-brain"></i>
+    </div>
+    <h1>Джон Маккарти</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">Введение</a></li>
+            <li><a href="#info">Информация</a></li>
+            <li><a href="#contact">Обратная связь</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="about" class="about">
+        <h2>Введение</h2>
+        <figure class="about__photo">
+            <img src="img/John_McCarthy_2006.jpg" alt="Джон Маккарти. Фото 2006 года">
+            <figcaption>Джон Маккарти. Фото 2006 года</figcaption>
+        </figure>
+
+        <p>Джон Маккарти — американский учёный, один из основоположников искусственного интеллекта. Он родился <time datetime="1927-09-04">4 сентября 1927 года</time> в Бостоне в семье иммигрантов.</p>
+
+        <p>Он придумал язык программирования <code>Lisp</code> и ввёл сам термин <strong>«искусственный интеллект»</strong>. Его работы заложили фундамент современной компьютерной науки.</p>
+
+        <p lang="en">John McCarthy was an American computer scientist and cognitive scientist. He was one of the founders of the discipline of artificial intelligence.</p>
+
+        <blockquote>
+            <q>Искусственный интеллект — это наука и инженерия создания интеллектуальных машин.</q>
+            <cite>— Джон Маккарти</cite>
+        </blockquote>
+    </section>
+
+    <section id="info" class="articles">
+        <h2>Информация</h2>
+        <ul class="articles__list">
+            <li><a href="article1.html">Биография</a></li>
+            <li><a href="article2.html">Основные достижения</a></li>
+            <li><a href="article3.html">Интересные факты</a></li>
+            <li><a href="article4.html">Список терминов</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Обратная связь</h2>
+        <form id="contact-form" action="#" method="post">
+            <div class="form__item">
+                <label for="topic">Тема обращения</label><br>
+                <select id="topic" name="topic" required>
+                    <option value="">— Выберите тему —</option>
+                    <option value="bio">Биография</option>
+                    <option value="science">Научные работы</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <div class="form__item">
+                <label for="name">Имя</label><br>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            </div>
+
+            <div class="form__item">
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+            </div>
+
+            <div class="form__item">
+                <label for="date">Дата</label><br>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form__item">
+                <label for="phone">Телефон</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="form__item">
+                <label for="message">Текст сообщения</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
+            </div>
+
+            <div class="form__item form__item--checkbox">
+                <label>
+                    <input type="checkbox" name="policy" required>
+                    Я согласен с политикой конфиденциальности
+                </label>
+            </div>
+
+            <div class="form__item">
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; Шарушинский Никита, <time datetime="2026">2026</time> г.</p>
+    <p>
+        <a href="tel:+79001112233"><i class="fa-solid fa-phone"></i> +7 (900) 111-22-33</a> |
+        <a href="mailto:example@test.ru"><i class="fa-solid fa-envelope"></i> example@test.ru</a>
+    </p>
+    <p>
+        Вы также можете найти меня здесь:
+        <a href="https://vk.com" target="_blank" rel="noopener"><i class="fa-brands fa-vk"></i> ВКонтакте</a>
+    </p>
+    <p class="footer__sources">
+        Источники:
+        <a href="https://ru.wikipedia.org/wiki/Маккарти,_Джон" target="_blank" rel="noopener"><i class="fa-brands fa-wikipedia-w"></i> Wikipedia</a>
+        <a href="https://plato.stanford.edu/entries/mccarthy/" target="_blank" rel="noopener"><i class="fa-solid fa-book"></i> Stanford Encyclopedia</a>
+    </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+/* сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.2em;
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* шапка */
+header {
+    background-color: #4a90a4;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header__logo {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: #2c5f73;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* подвал */
+footer {
+    background-color: #4a90a4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+/* иконки в футере — селектор потомков */
+.footer__sources a i,
+footer p a i {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+/* секции */
+.about {
+    background-color: #e8f0f4;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.articles {
+    background-color: #fff4e0;
+    padding: 30px 20px;
+}
+
+.contact {
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+}
+
+/* селекторы потомков для раздела "Введение" */
+.about p,
+.about h2,
+.about blockquote {
+    color: #2c3e50;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #1a3a4a;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.articles h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #8b5a2b;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.contact h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* фото в секции "Введение" */
+.about__photo img {
+    max-width: 300px;
+    border: 3px solid #4a90a4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.about__photo figcaption {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* параграфы */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.3rem;
+    text-align: justify;
+}
+
+/* разряженный текст первых строк параграфов в статьях */
+article p::first-line {
+    letter-spacing: 0.05em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* параграфы на английском — псевдокласс :lang */
+p:lang(en) {
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #4a90a4;
+    padding-left: 15px;
+}
+
+/* Ссылки */
+a {
+    color: #2c5f73;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: #1a3a4a;
+    outline: none;
+}
+
+/* ссылки раздела "Информация" */
+.articles__list li a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: white;
+    border-left: 4px solid #8b5a2b;
+    transition: background-color 0.2s;
+}
+
+.articles__list li a:hover,
+.articles__list li a:focus {
+    background-color: #ffe8b0;
+    text-decoration: none;
+    outline: none;
+}
+
+/* чересстрочное оформление списка "Информация" */
+.articles__list li:nth-child(odd) {
+    background-color: #fff8ec;
+}
+
+.articles__list li:nth-child(even) {
+    background-color: #fff0d6;
+}
+
+.articles__list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* псевдоэлемент "Важно!" у пункта "Список терминов" */
+.articles__list li:last-child::after {
+    content: "Важно!";
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    background-color: #d9534f;
+    color: white;
+    border: 1px solid #a94442;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* изображения в статьях */
+.article__img {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.article__img img {
+    display: block;
+    width: 100%;
+    border: 3px solid #4a90a4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article__img figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* соседний селектор: отступ сверху у параграфа после картинки */
+.article__img + p {
+    margin-top: 25px;
+}
+
+/* оглавление */
+.toc {
+    background-color: #e8f0f4;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.toc h3 {
+    font-family: "Playfair Display", serif;
+    color: #1a3a4a;
+    margin-bottom: 10px;
+}
+
+.toc ol {
+    margin-left: 20px;
+}
+
+.toc ol li {
+    margin: 5px 0;
+}
+
+/* заголовки */
+h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #2c5f73;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* цитаты */
+blockquote {
+    background-color: #e8f0f4;
+    border-left: 5px solid #4a90a4;
+    padding: 15px 20px;
+    margin: 20px 50px;
+    font-style: italic;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: #2c5f73;
+    margin-top: 10px;
+}
+
+q {
+    font-style: italic;
+    color: #2c5f73;
+}
+
+/* списки определений */
+dl {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c5f73;
+    margin-top: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+dd {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+/* код */
+code {
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    font-family: monospace;
+    color: #c0392b;
+    border-radius: 3px;
+}
+
+pre {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+pre code {
+    background-color: transparent;
+    color: #ecf0f1;
+}
+
+kbd {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* время, strong, em, del, ins */
+time {
+    color: #2c5f73;
+    font-style: italic;
+}
+
+strong {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+em {
+    color: #27ae60;
+    font-style: italic;
+}
+
+del {
+    color: #c0392b;
+    text-decoration: line-through;
+}
+
+ins {
+    color: #27ae60;
+    text-decoration: underline;
+}
+
+/* таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+caption {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c5f73;
+}
+
+th, td {
+    border: 1px solid #4a90a4;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90a4;
+    color: white;
+    font-weight: bold;
+}
+
+/* чересстрочное оформление строк */
+tbody tr:nth-child(odd) {
+    background-color: #e8f0f4;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* первый столбец */
+td:first-child,
+th:first-child {
+    font-weight: bold;
+    background-color: #d4e4eb;
+    text-align: center;
+}
+
+/* последняя строка */
+tbody tr:last-child {
+    background-color: #c9dde6;
+    font-weight: bold;
+}
+
+/* форма обратной связи */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form__item {
+    margin-bottom: 15px;
+}
+
+.form__item label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="date"],
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 5px;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form input[type="tel"]:focus,
+#contact-form input[type="date"]:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    border-color: #4a90a4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 164, 0.5);
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+.form__item--checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+#contact-form input[type="submit"] {
+    background-color: #4a90a4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #2c5f73;
+}
+
+/* адаптивность */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    blockquote {
+        margin: 20px 10px;
+    }
+}
