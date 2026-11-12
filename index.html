@@ -38,7 +38,7 @@
 <body>
 
 <header>
-    <div class="header__logo">
+    <div class="header_logo">
         <i class="fa-solid fa-brain"></i>
     </div>
     <h1>Джон Маккарти</h1>
@@ -55,7 +55,7 @@
 
     <section id="about" class="about">
         <h2>Введение</h2>
-        <figure class="about__photo">
+        <figure class="about_photo">
             <img src="img/John_McCarthy_2006.jpg" alt="Джон Маккарти. Фото 2006 года">
             <figcaption>Джон Маккарти. Фото 2006 года</figcaption>
         </figure>
@@ -74,7 +74,7 @@
 
     <section id="info" class="articles">
         <h2>Информация</h2>
-        <ul class="articles__list">
+        <ul class="articles_list">
             <li><a href="article1.html">Биография</a></li>
             <li><a href="article2.html">Основные достижения</a></li>
             <li><a href="article3.html">Интересные факты</a></li>
@@ -84,8 +84,8 @@
 
     <section id="contact" class="contact">
         <h2>Обратная связь</h2>
-        <form id="contact-form" action="#" method="post">
-            <div class="form__item">
+        <form id="contact-form">
+            <div class="form_item">
                 <label for="topic">Тема обращения</label><br>
                 <select id="topic" name="topic" required>
                     <option value="">— Выберите тему —</option>
@@ -95,39 +95,39 @@
                 </select>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <label for="name">Имя</label><br>
                 <input type="text" id="name" name="name" placeholder="Ваше имя" required>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <label for="email">E-mail</label><br>
                 <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <label for="date">Дата</label><br>
                 <input type="date" id="date" name="date" required>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <label for="phone">Телефон</label><br>
                 <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <label for="message">Текст сообщения</label><br>
                 <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
             </div>
 
-            <div class="form__item form__item--checkbox">
+            <div class="form_item form_item--checkbox">
                 <label>
                     <input type="checkbox" name="policy" required>
                     Я согласен с политикой конфиденциальности
                 </label>
             </div>
 
-            <div class="form__item">
+            <div class="form_item">
                 <input type="submit" value="Отправить">
             </div>
         </form>
@@ -141,14 +141,9 @@
         <a href="tel:+79001112233"><i class="fa-solid fa-phone"></i> +7 (900) 111-22-33</a> |
         <a href="mailto:example@test.ru"><i class="fa-solid fa-envelope"></i> example@test.ru</a>
     </p>
-    <p>
-        Вы также можете найти меня здесь:
-        <a href="https://vk.com" target="_blank" rel="noopener"><i class="fa-brands fa-vk"></i> ВКонтакте</a>
-    </p>
-    <p class="footer__sources">
+    <p class="footer_sources">
         Источники:
         <a href="https://ru.wikipedia.org/wiki/Маккарти,_Джон" target="_blank" rel="noopener"><i class="fa-brands fa-wikipedia-w"></i> Wikipedia</a>
-        <a href="https://plato.stanford.edu/entries/mccarthy/" target="_blank" rel="noopener"><i class="fa-solid fa-book"></i> Stanford Encyclopedia</a>
     </p>
 </footer>
 

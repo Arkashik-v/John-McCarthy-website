@@ -23,7 +23,7 @@ header {
     padding: 30px 20px;
 }
 
-.header__logo {
+.header_logo {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
@@ -78,7 +78,7 @@ footer a:focus {
 }
 
 /* иконки в футере — селектор потомков */
-.footer__sources a i,
+.footer_sources a i,
 footer p a i {
     border: 1px solid white;
     border-radius: 50%;
@@ -144,7 +144,7 @@ footer p a i {
 }
 
 /* фото в секции "Введение" */
-.about__photo img {
+.about_photo img {
     max-width: 300px;
     border: 3px solid #4a90a4;
     border-radius: 10px;
@@ -152,7 +152,7 @@ footer p a i {
     margin: 20px auto;
 }
 
-.about__photo figcaption {
+.about_photo figcaption {
     font-style: italic;
     color: #555;
     margin-top: 10px;
@@ -195,7 +195,7 @@ a:focus {
 }
 
 /* ссылки раздела "Информация" */
-.articles__list li a {
+.articles_list li a {
     display: block;
     padding: 10px;
     margin: 5px 0;
@@ -204,30 +204,30 @@ a:focus {
     transition: background-color 0.2s;
 }
 
-.articles__list li a:hover,
-.articles__list li a:focus {
+.articles_list li a:hover,
+.articles_list li a:focus {
     background-color: #ffe8b0;
     text-decoration: none;
     outline: none;
 }
 
 /* чересстрочное оформление списка "Информация" */
-.articles__list li:nth-child(odd) {
+.articles_list li:nth-child(odd) {
     background-color: #fff8ec;
 }
 
-.articles__list li:nth-child(even) {
+.articles_list li:nth-child(even) {
     background-color: #fff0d6;
 }
 
-.articles__list {
+.articles_list {
     list-style: none;
     max-width: 600px;
     margin: 0 auto;
 }
 
 /* псевдоэлемент "Важно!" у пункта "Список терминов" */
-.articles__list li:last-child::after {
+.articles_list li:last-child::after {
     content: "Важно!";
     display: inline-block;
     margin-left: 10px;
@@ -241,12 +241,12 @@ a:focus {
 }
 
 /* изображения в статьях */
-.article__img {
+.article_img {
     margin: 20px auto;
     max-width: 400px;
 }
 
-.article__img img {
+.article_img img {
     display: block;
     width: 100%;
     border: 3px solid #4a90a4;
@@ -254,7 +254,7 @@ a:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.article__img figcaption {
+.article_img figcaption {
     text-align: center;
     font-style: italic;
     color: #666;
@@ -262,7 +262,7 @@ a:focus {
 }
 
 /* соседний селектор: отступ сверху у параграфа после картинки */
-.article__img + p {
+.article_img + p {
     margin-top: 25px;
 }
 
@@ -458,11 +458,11 @@ tbody tr:last-child {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form__item {
+.form_item {
     margin-bottom: 15px;
 }
 
-.form__item label {
+.form_item label {
     font-weight: bold;
     color: #2c3e50;
 }
@@ -497,7 +497,7 @@ tbody tr:last-child {
     resize: vertical;
 }
 
-.form__item--checkbox label {
+.form_item--checkbox label {
     display: flex;
     align-items: center;
     gap: 8px;
